@@ -1,0 +1,33 @@
+section {
+  position: absolute;
+  height: fit-content;
+}
+
+section div {
+  background-color: dodgerblue;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 1px 2px 8px black;
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem 0;
+  padding: 0 0.1rem 0 1rem;
+  position: relative;
+  right: 180px;
+  transition: 0.8s;
+  width: 200px;
+}
+
+section > div i {
+  position: absolute;
+  right: 10px;
+}
+
+section div:hover {
+  cursor: pointer;
+  right: 20px;
+}
+
+i {
+  align-self: center;
+  padding-left: 1.5rem;
+}

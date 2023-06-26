@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+}
+
+section {
+  position: absolute;
+  height: fit-content;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+section > div {
+  border-radius: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(36, 36, 113);
+}
+
+section > div div {
+  z-index: 1;
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  border: 20px solid whitesmoke;
+  border-top-color: red;
+}
+
+section > div div:hover {
+  transform: rotate(360deg);
+  transition-duration: 3s;
+}
+
+h1 {
+  transform: none;
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: whitesmoke;
+  font-weight: bolder;
+}

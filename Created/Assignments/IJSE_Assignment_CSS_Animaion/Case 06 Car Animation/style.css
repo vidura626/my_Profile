@@ -1,0 +1,108 @@
+body {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  background: url(images/sky.jpg);
+  background-size: cover;
+}
+
+.back {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Animation for background */
+.back div:first-child,
+.back div:last-child {
+  animation-name: background-anim;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  width: 500vw;
+  position: relative;
+}
+
+/* City image for parent div */
+.back div:first-child {
+  background-image: url(images/city.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 40vh;
+}
+/* road image */
+.back div:last-child {
+  background-image: url(images/road.jpg);
+  background-repeat: repeat-x;
+  height: 30vh;
+  z-index: 10;
+}
+
+/* car parent */
+.car {
+  height: 200px;
+  position: absolute;
+  width: 100vw;
+  bottom: 20px;
+  z-index: 10;
+}
+
+/* car image */
+.car div:first-child img {
+  height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 1000px;
+  left: 0;
+  margin: auto;
+}
+
+/* wheel image */
+.car div:nth-child(2) img {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 100px;
+  left: 290px;
+  margin: auto;
+}
+
+/* wheel image */
+.car div:last-child img {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 300px;
+  bottom: 100px;
+  left: 0;
+  margin: auto;
+}
+
+/* Animation for car */
+.car div:last-child img,
+.car div:nth-child(2) img {
+  animation-name: wheel;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wheel {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes background-anim {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-400vw);
+  }
+}

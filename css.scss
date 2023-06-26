@@ -290,7 +290,7 @@ a {
   h3 {
     font-size: 1rem;
     letter-spacing: 0.3rem;
-    opacity: 0.6;
+    //opacity: 0.6;
   }
 }
 
@@ -360,11 +360,10 @@ a {
 
 
 //Skills
-
 .created-split {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .created-split h2 {
   font-size: 2rem;
