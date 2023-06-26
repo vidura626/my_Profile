@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knight Rider</title>
+</head>
+<style>
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: #141313;
+        overflow: hidden;
+    }
+    #light-panel {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        width: fit-content;
+        height: fit-content;
+    }
+
+    #light-panel .light {
+        width: 50px;
+        height: 20px;
+        border: 0.5px solid #f2eeee;
+        display: inline-block;
+    }
+
+
+
+</style>
+<body>
+<audio id="audio" src="src/assesst/audio/knightrider-20091.mp3" type="mp3"></audio>
+<section id="light-panel">
+
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+
+    <button id="start" type="button" class="btn btn-primary">start</button>
+    <button id="stop" type="button" class="btn btn-primary">stop</button>
+
+</section>
+
+
+<script src="src/assesst/lib/jQuery/jquery-3.6.4.min.js"></script>
+<script>
+
+    var lightNumber = 1;
+    var direction = "RIGHT";
+    var intervalId = null;
+
+    var lights = $(".light")
+    console.log(lights);
+
+    function updateLights() {
+        $(".light").css({background: 'white'});
+        lights[lightNumber].style.background = 'red';
+
+        if (lightNumber > 0) {
+            lights[lightNumber - 1].style.background = 'pink';
+
+        }
+
+        if (lightNumber < 6){
+            lights[lightNumber + 1].style.background = 'pink';
+         }
+
+        if (lightNumber === 6){
+            direction = 'LEFT'
+        }
+
+        if (direction == 'RIGHT'){
+            lightNumber++;
+        }else {
+            lightNumber--;
+        }
+
+        if (lightNumber === 0){
+            direction = 'RIGHT'
+        }
+    };
+
+
+    $('#start').on('click',()=>{
+        $('#audio')[0].play();
+        intervalId = setInterval(updateLights,100);
+    });
+
+    $('#stop').on('click',()=>{
+        $('#audio')[0].pause();
+        clearInterval(intervalId);
+    });
+
+
+</script>
+</body>
+</html>

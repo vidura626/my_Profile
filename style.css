@@ -1,6 +1,7 @@
 /* ---- reset ---- */
 * {
   box-sizing: border-box !important;
+  padding: 0;
 }
 
 body {
@@ -14,17 +15,6 @@ canvas {
 }
 
 /* ---- particles.js container ---- */
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
 /* ---- stats.js ---- */
 .count-particles {
   background: #6e6ede;
@@ -73,15 +63,18 @@ canvas {
   z-index: -1;
 }
 
-.count-particles + h1 {
+#firstTopic {
   margin-bottom: 5rem !important;
   text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%), 0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%), 0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%), 0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%), 0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
   color: #ffffff;
   z-index: 1;
   transition-duration: 0.2s;
+  background: none;
+  box-shadow: none;
+  transform: none;
 }
 
-.count-particles + h1:hover {
+#firstTopic:hover {
   transform: translate3d(0, -10px, 22px);
   color: #2a4a83;
 }
@@ -240,16 +233,30 @@ a {
   align-items: center;
   position: relative;
   background: #eee;
-  height: fit-content;
+  height: fit-content !important;
   min-height: 100vh;
   text-align: center;
   padding: 0 2em;
 }
 .et-hero-tabs h1,
 .et-slide h1 {
+  width: 100%;
   font-size: 2rem;
   margin: 0;
   letter-spacing: 1rem;
+  color: aqua;
+  padding: 1rem;
+  background: #111111;
+  box-shadow: 5px 5px 20px 1px black;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  transform: scale(0.95);
+  transition-duration: 0.2s;
+}
+.et-hero-tabs h1:hover,
+.et-slide h1:hover {
+  transform: scale(1);
+  letter-spacing: 1.1rem;
 }
 .et-hero-tabs h3,
 .et-slide h3 {
@@ -317,6 +324,17 @@ a {
     font-size: 1.5rem;
   }
 }
+.created-split {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.created-split h2 {
+  font-size: 2rem;
+  text-decoration: overline;
+}
+
 .sec-skills {
   align-items: center;
   box-shadow: 2px 2px 20px 0 #ffffff inset;
@@ -477,6 +495,11 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+#tab-journey {
+  position: relative;
+  overflow: auto;
 }
 
 #sec-education > div:nth-of-type(odd) {
@@ -702,6 +725,28 @@ a {
   width: 200px;
 }
 
+.c--container .card--links {
+  width: 100%;
+  text-align: center;
+}
+
+.c--container .card--btns {
+  position: absolute;
+  bottom: 0;
+  width: 100% !important;
+  padding: 0.25rem 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  outline: none;
+  border: none;
+  box-shadow: 2px 2px 5px 0 black;
+  border-radius: 0.25rem;
+}
+
+.card--p {
+  margin: 0.1rem 0;
+}
+
 .c--container .card--title::after {
   background-color: whitesmoke;
   border-bottom: 2px solid rgba(56, 56, 94, 0.5);
@@ -717,7 +762,6 @@ a {
 
 .c--container .card--background {
   opacity: 0.6;
-  background: url("../assets/img.png") no-repeat center center;
   background-size: 100%;
 }
 

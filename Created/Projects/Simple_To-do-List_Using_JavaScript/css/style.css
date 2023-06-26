@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, #cfc6e6, #7e61ff);
+}
+
+.container {
+  width: 40%;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px 40px;
+}
+
+#newTask {
+  position: relative;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+#newTask input {
+  width: 70%;
+  width: 70%;
+  height: 45px;
+  font-family: sans-serif;
+  font-size: 15px;
+  border: 2px solid #d1d3d4;
+  padding: 12px;
+  color: #111111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+}
+
+#newTask input {
+  outline: none;
+  transition-duration: 0.2s;
+  border-color: #8052ec;
+}
+
+#newTask button {
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #4f1bc7;
+  color: #ffffff;
+  border: none;
+  font-weight: bolder;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.tasks {
+  transition-duration: 0.8s;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: relative;
+}
+
+.task {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0.5rem;
+}
+
+.delete {
+  font-family: serif;
+  position: absolute;
+  right: 50px;
+  border: none;
+}
+
+.fa-trash {
+  -webkit-text-fill-color: #695793;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.check {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.button {
+  width: 200px;
+  height: 42px;
+  margin: 1rem 0;
+  border-radius: 5px;
+  border: none;
+  padding: 0.4rem;
+  cursor: pointer;
+  background-color: whitesmoke;
+  font-weight: bolder;
+  transition-duration: 0.2s;
+}
+
+.button:hover,
+#push:hover,
+#newTask input:hover {
+  scale: 1.05;
+}
+
+.check div {
+  text-align: center;
+  height: fit-content;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: 1rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  font-size: 25px;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+h1 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 20vh;
+  text-align: center;
+  color: white;
+  letter-spacing: 10px;
+  font-size: 3rem;
+}
