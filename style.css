@@ -17,7 +17,6 @@ canvas {
 /* ---- particles.js container ---- */
 /* ---- stats.js ---- */
 .count-particles {
-  background: #6e6ede;
   position: absolute;
   top: 48px;
   left: 0;
@@ -60,6 +59,7 @@ canvas {
 }
 
 #particles-js + .count-particles {
+  position: absolute;
   z-index: -1;
 }
 

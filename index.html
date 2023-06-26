@@ -5,9 +5,10 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e708ce712d.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-<section class="et-hero-tabs h-100">
+<section data-aos="zoom-in" data-aos-duration="500" class="et-hero-tabs h-100">
     <div id="particles-js"></div>
     <div class="count-particles"><span class="js-count-particles"></span></div>
     <h1 id="firstTopic">VIDURA RAMES WIJESINGHE</h1>
@@ -47,11 +48,11 @@
 
 <!-- Main -->
 <main class="et-main">
-    <section class="et-slide h-100" id="tab-about">
+    <section data-aos="fade-right" class="et-slide h-100" id="tab-about">
         <h1>ABOUT</h1>
         <h3>something about es6</h3>
     </section>
-    <section class="et-slide" id="tab-skills">
+    <section data-aos="fade-right" class="et-slide" id="tab-skills">
         <h1>SKILLS</h1>
         <section class="sec-skills">
             <article class="item">
@@ -95,7 +96,7 @@
             </article>
         </section>
     </section>
-    <section class="et-slide h-100" id="tab-created">
+    <section data-aos="fade-right" class="et-slide h-100" id="tab-created">
         <h1>CREATED</h1>
         <section class="created-split">
             <div>
@@ -360,7 +361,7 @@
             </div>
         </section>
     </section>
-    <section class="et-slide h-100" id="tab-journey">
+    <section data-aos="fade-right" class="et-slide h-100" id="tab-journey">
         <h1>JOURNEY</h1>
         <section id="sec-education">
             <div class="line-sec">
@@ -399,7 +400,7 @@
 
         </section>
     </section>
-    <section class="et-slide h-100" id="tab-contact">
+    <section data-aos="fade-right" class="et-slide h-100" id="tab-contact">
         <h1>CONTACT</h1>
         <br>
         <section class="sec-contact">
@@ -424,6 +425,10 @@
 <footer>
     <p>Developped by VIDURA RAMES WIJESINGHE</p>
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="lib/particles.min.js"></script> <!-- stats.js lib -->
 <script src="lib/jquery-3.7.0.min.js"></script>
 <script src="js.js"></script>
