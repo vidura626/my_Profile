@@ -1,9 +1,9 @@
-section {
+.social section {
   position: absolute;
   height: fit-content;
 }
 
-section div {
+.social section div {
   background-color: dodgerblue;
   border-radius: 0 5px 5px 0;
   box-shadow: 1px 2px 8px black;
@@ -17,17 +17,17 @@ section div {
   width: 200px;
 }
 
-section > div i {
+.social section > div i {
   position: absolute;
   right: 10px;
 }
 
-section div:hover {
+.social section div:hover {
   cursor: pointer;
   right: 20px;
 }
 
-i {
+.social i {
   align-self: center;
   padding-left: 1.5rem;
 }
